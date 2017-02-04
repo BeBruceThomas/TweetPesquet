@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Carte</title>
+
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/master/leaflet.css" />
+   <script src="jquery-3.1.1.min.js"></script>
+
+
+  </head>
+  <body>
+    <h1>Latitude</h1>
+    <div id="lat"></div>
+    <h1>Longitude</h1>
+    <div id="lon"></div>
+
+    <label>Smartphone<input type="radio" name="zoom" value="7" id="smart"/></label>
+    <label>Réflex<input type="radio" name="zoom" value="10" id="reflex"/></label>
+    <label>Téléobjectif<input type="radio" name="zoom" value="13" id="tele"/></label>
+    <input type="submit" name="envoi" value="Tweet comme Pesquet"/>
+
+    <div id="map" style="height: 300px;"></div>
+
+    <script src="http://cdn.leafletjs.com/leaflet/master/leaflet.js"></script>
+    <script src='leaflet.js'></script>
+
+  </body>
+</html>
