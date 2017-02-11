@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Carte</title>
+    <title>MapTweeteCommePesquet</title>
 
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/master/leaflet.css" />
     <script src="jquery-3.1.1.min.js"></script>
@@ -22,17 +22,26 @@
       }
     ?>
 
+    <div id="map" style="height: 300px;"></div>
+
+    <div id="radio;">
+    <label>Smartphone<input type="radio" name="zoom" value="7"/></label>
+    <label>Réflex<input type="radio" name="zoom" value="10"/></label>
+    <label>Téléobjectif<input type="radio" name="zoom" value="13"/></label>
+    </div>
+
+    <div class="case">
+      <label>Suivre l'ISS<input type="checkbox" name="ISS" /></label>
+    </div>
+
+    <input type="submit" name="envoi" value="Tweet comme Pesquet"/>
+
     <h1>Latitude</h1>
     <div id="lat"></div>
     <h1>Longitude</h1>
     <div id="lon"></div>
 
-    <label>Smartphone<input type="radio" name="zoom" value="7"/></label>
-    <label>Réflex<input type="radio" name="zoom" value="10"/></label>
-    <label>Téléobjectif<input type="radio" name="zoom" value="13"/></label>
-    <input type="submit" name="envoi" value="Tweet comme Pesquet"/>
 
-    <div id="map" style="height: 300px;"></div>
 
     <form class="ajax" action="search.php" method="get">
     	<p>

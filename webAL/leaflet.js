@@ -1,9 +1,15 @@
 var valzoom=4
+
+function coordChange(){
 if(document.getElementById('smart').checked){
       valzoom=document.getElementById("smart").value;
 }else if (document.getElementById("reflex").checked) {
       valzoom=document.getElementById("reflex").value;
 }else{valzoom=document.getElementById("tele").value}
+setTimeout(coordChange, 5000);
+}
+
+coordChange();
 
 var map = L.map('map',{zoom : valzoom});
 var osmUrl='http://{s}.tile.osm.org/{z}/{x}/{y}.png';
@@ -13,7 +19,9 @@ var osm = new L.TileLayer(osmUrl, {attribution: osmAttrib}).addTo(map);
 
 var lat;
 var lon;
-var iss = L.marker([0,0]).addTo(map);
+
+var markerLayer = L.featureGroup();
+var traceLayer = L.featureGroup();
 
 
 /*ajaxGet("http://api.open-notify.org/iss-now.json", function(reponse){
@@ -35,9 +43,12 @@ function moveISS () {
         lon = data['iss_position']['longitude'];
 
         // See leaflet docs for setting up icons and map layers
+        markerLayer.clearLayers();
+        var iss = L.marker([lat, lon]).addTo(map);
         // The update to the map is done here:
         iss.setLatLng([lat, lon]);
         map.panTo([lat, lon], animate=true);
+        traceLayer.addTo(map);
     });
     setTimeout(moveISS, 5000);
 }
