@@ -21,6 +21,8 @@ function getCoords() {
     $.getJSON('http://api.open-notify.org/iss-now.json?callback=?', function(data) {
         latitude = data['iss_position']['latitude'];
         longitude = data['iss_position']['longitude'];
+        document.getElementById("latitude").textContent = latitude;
+        document.getElementById("longitude").textContent = longitude;
     });
 }
 
@@ -35,7 +37,10 @@ function moveISS() {
         trace.addTo(traceLayer);
     }
 
-    map.setView([latitude, longitude], 6);
+    if ((document.getElementById("controleMap").checked)) {
+        map.setView([latitude, longitude], 6);
+    }
+
     iss.addTo(markerLayer);
     markerLayer.addTo(map);
     traceLayer.addTo(map);
