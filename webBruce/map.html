@@ -13,9 +13,30 @@
   </head>
 
   <body>
-    
+
     <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+
+    <h2>Latitude</h2>
+    <div id="latitude"></div>
+    <h2>Longitude</h2>
+    <div id="longitude"></div>
+
     <div id="mapid"></div>
+
+    <div id="zoom">
+    <label>Smartphone<input type="radio" name="zoom" value="7" id="smartphone"/></label>
+    <label>Réflex<input type="radio" name="zoom" value="10" id="reflex"/></label>
+    <label>Téléobjectif<input type="radio" name="zoom" value="13" id="teleobjectif"/></label>
+    </div>
+
+    <div id="suivi">
+      <label>Suivi ISS<input type="checkbox" name="suivi" id="controleMap" checked/></label>
+    </div>
+
+    <input type="submit" name="envoi" value="Tweet comme Pesquet"/>
+
+
+
     <script src='map.js'></script>
 
   </body>
