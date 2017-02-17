@@ -57,6 +57,46 @@ function refreshView() {
     }, 1000);
 }
 
+// Fonction de génération de l'URL pour la création de la photo du Tweet
+function URLphoto(zoom) {
+    var URL = 'https://api.mapbox.com/styles/v1/mapbox/satellite-v8/static/'
+    // add longitude
+    URL += longitude.toString()
+    URL += ','
+    // add latitude
+    URL += latitude.toString()
+    URL += ','
+    // add zoom
+    URL += zoom.toString()
+    URL += ','
+    // add bearing
+    URL += '0,'
+    // add pitch
+    URL += '0/'
+    // add width and height
+    URL += '400x640?'
+    // add key
+    URL += 'access_token=pk.eyJ1IjoiYnJ1Y2V0aG9tYXMiLCJhIjoiY2l6N2tzeHNpMDAwNzMycGl2MHM1djVydiJ9.u4j45a8gVHB8BW_3DR6xAA'
+    return URL
+}
+
+// Fonction de création de la photo
+function createPhoto(zoom) {
+    var photo = document.createElement("img");
+    // Suppression de l'ancienne photo
+    var twt = document.getElementById("tweetPhoto")
+    while (twt.firstChild) {twt.removeChild(twt.firstChild);}
+    // Affichage de la photo
+    photo.setAttribute("src", URLphoto(zoom));
+    document.getElementById("tweetPhoto").appendChild(photo);
+}
+
+// Lorsque l'utilisateur clique sur le bouton "Tweet like Pesquet", la photo du lieu survolé apparaît en tenant compte du zoom voulu
+document.getElementById('clicTweet').addEventListener("click", function() {
+    var zoom = $('input[name="zoom"]:checked').val();
+    createPhoto(zoom);
+});
+
 // Initialisation de la carte avec les coordonnées de l'ISS à l'instant présent
 getCoords();
 // Mise à jour de la carte toutes les secondes
