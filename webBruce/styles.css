@@ -1,4 +1,16 @@
-#mapid {
-  width: 500px;
-  height: 300px;
+html{
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+#mapid{
+  height:100vh;
+  width:85%;
+  margin:0px;
+}
+
+img{
+  width: 100%;
+  height:auto;
 }
