@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+      <meta charset="utf-8">
+      <title>twISSt - Tweete comme Pesquet</title>
+
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+      <link rel="stylesheet" href="styles.css">
+
+  </head>
+
+  <body>
+
+      <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+      <div id="entête">
+          <h1>TwISSt</h1>
+          <div id="coords">
+            <div id="latitude"></div>
+            <div id="longitude"></div>
+          </div>
+          <div id="chek">
+            <div id="suivi">
+                <label>Suivi ISS<input type="checkbox" name="suivi" id="controleMap" checked/></label>
+            </div>
+            <div id="debug">
+                <label>Debug ISS<input type="checkbox" name="debug" id="debugMap"/></label>
+            </div>
+          </div>
+      </div>
+
+
+
+
+      <div id="mapid"></div>
+
+
+
+
+      <div id="setTweet">
+          <div id="zoom">
+              <label>Smartphone<input type="radio" name="zoom" value="7" id="smartphone"/></label>
+              <label>Réflex<input type="radio" name="zoom" value="10" id="reflex"/></label>
+              <label>Téléobjectif<input type="radio" name="zoom" value="13" id="teleobjectif"/></label>
+          </div>
+          <input type="submit" id="clicTweet" name="envoi" value="Tweet comme Pesquet"/>
+
+          <div id='tweet'>
+              <div id='photo'></div>
+              <div id='lieu'></div>
+          </div>
+      </div>
+
+
+      <script src='map.js'></script>
+
+  </body>
+
+</html>
