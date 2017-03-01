@@ -1,14 +1,49 @@
-html{
+body {
   height: 100%;
-  margin: 0px;
-  padding: 0px;
+  background: #E0CDA9;
+}
+
+#entête {
+    width: 100%;
+    padding: 5px 0px;
+    margin-bottom: 10px;
+    background: #204060;
+    border: 2px solid gray;
 }
 
 #mapid{
-  height:100vh;
-  width:85%;
-  margin:0px;
+  height: 80vh;
+  width: 60%;
+  margin: 10px;
 }
+
+#setTweet{
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+
+
+
+
+
+h1{
+    text-align: center;
+    font-family: 'Trocchi', serif;
+     font-size: 1.3em;
+     color: #7c795d;
+     font-weight: normal;
+}
+h2 {
+  color: #7c795d;
+   font-family: 'Trocchi', serif;
+    font-size: 1.3em;
+    font-weight: normal;
+     margin: 0;
+    text-align: center; }
 
 img{
   width: 100%;
