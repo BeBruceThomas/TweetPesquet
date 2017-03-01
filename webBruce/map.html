@@ -3,43 +3,49 @@
 
   <head>
 
-    <meta charset="utf-8">
-    <title>MapTweeteCommePesquet</title>
+      <meta charset="utf-8">
+      <title>twISSt - Tweete comme Pesquet</title>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
-    <link rel="stylesheet" href="styles.css">
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+      <link rel="stylesheet" href="styles.css">
 
   </head>
 
   <body>
 
-    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+      <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
-    <h2>Latitude</h2>
-    <div id="latitude"></div>
-    <h2>Longitude</h2>
-    <div id="longitude"></div>
+      <div id="entête">
+          <h1>twISSt</h1>
+          <div id="coords"></div>
+      </div>
 
-    <div id="mapid"></div>
+      <div id="mapid"></div>
 
-    <div id="zoom">
-    <label>Smartphone<input type="radio" name="zoom" value="7" id="smartphone"/></label>
-    <label>Réflex<input type="radio" name="zoom" value="10" id="reflex"/></label>
-    <label>Téléobjectif<input type="radio" name="zoom" value="13" id="teleobjectif"/></label>
-    </div>
+      <div id="suivi">
+          <label>Suivi ISS<input type="checkbox" name="suivi" id="controleMap" checked/></label>
+      </div>
+      <div id="debug">
+          <label>Debug ISS<input type="checkbox" name="debug" id="debugMap"/></label>
+      </div>
 
-    <div id="suivi">
-      <label>Suivi ISS<input type="checkbox" name="suivi" id="controleMap" checked/></label>
-    </div>
+      <div id="setTweet">
+          <div id="zoom">
+              <label>Smartphone<input type="radio" name="zoom" value="7" id="smartphone"/></label>
+              <label>Réflex<input type="radio" name="zoom" value="10" id="reflex"/></label>
+              <label>Téléobjectif<input type="radio" name="zoom" value="13" id="teleobjectif"/></label>
+          </div>
+          <input type="submit" id="clicTweet" name="envoi" value="Tweet comme Pesquet"/>
 
-    <input type="submit" id="clicTweet" name="envoi" value="Tweet like Pesquet"/>
-    <div id='tweet'>
-      <div id='tweetPhoto'></div>
-      <h1 id='tweet_titre'>Hello World!</h1>
-    </div>
+          <div id='tweet'>
+              <div id='photo'></div>
+              <div id='lieu'></div>
+          </div>
+      </div>
 
-    <script src='map.js'></script>
+
+      <script src='map.js'></script>
 
   </body>
 
