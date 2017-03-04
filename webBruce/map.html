@@ -17,18 +17,29 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
       <div id="entête">
-          <h1>twISSt</h1>
-          <div id="coords"></div>
+          <h1>TwISSt</h1>
+          <div id="coords">
+                <div id="latitude"></div>
+                <div id="longitude"></div>
+          </div>
+          <div id="chek1">
+                <div id="suivi">
+                    <label>Suivi ISS<input type="checkbox" name="suivi" id="controleMap" checked/></label>
+                </div>
+                <div id="debug">
+                    <label>Debug ISS<input type="checkbox" name="debug" id="debugMap"/></label>
+                </div>
+                <input type="range" value="41" min="1" max="81" step="10" onchange="AfficheRange2(this.value)" onkeyup="AfficheRange2(this.value)">
+                <span id="valBox">Facteur de vitesse = 41</span>
+                <script>
+                    function AfficheRange2(newVal) {
+                        document.getElementById("valBox").innerHTML="Valeur="+newVal;
+                    }
+                </script>
+          </div>
       </div>
 
-      <div id="mapid"></div>
-
-      <div id="suivi">
-          <label>Suivi ISS<input type="checkbox" name="suivi" id="controleMap" checked/></label>
-      </div>
-      <div id="debug">
-          <label>Debug ISS<input type="checkbox" name="debug" id="debugMap"/></label>
-      </div>
+      <div id="mapid">Une réalisation d'Anne-Laure BECK et Bruce THOMAS !</div>
 
       <div id="setTweet">
           <div id="zoom">
@@ -44,8 +55,8 @@
           </div>
       </div>
 
-
       <script src='map.js'></script>
+      <script src='map.php'></script>
 
   </body>
 
