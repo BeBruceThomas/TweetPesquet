@@ -1,26 +1,15 @@
-<?
+<?php 
 
 // Création de l'URL 
-$URL = 'http://api.geonames.org/extendedFindNearby' + '?lat=' + $_GET['latitude'] + '&lng=' + $_GET['longitude'] + '&username=' + $_GET['username'];
+$latitude = $_POST['latitude'];
+$longitude = $_POST['longitude'];
+$username = 'brucethomas';
 
-// Récupération des données 
-
-//  Initiate curl
-$ch = curl_init();
-// Disable SSL verification
-curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-// Will return the response, if false it print the response
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-// Set the url
-curl_setopt($ch, CURLOPT_URL , $URL);
-// Execute
-$data = curl_exec($ch);
-// Closing
-curl_close($ch);
+$URL = 'http://api.geonames.org/extendedFindNearby'.'?lat='.$latitude.'&lng='.$longitude.'&username=brucethomas';
 
 // Conversion du résultat XML en JSON
-$xml = simplexml_load_string($data);
-$json = convert($xml);
+$xml = simplexml_load_file($URL);
+$json = json_encode($xml);
 
 echo($json);
 
