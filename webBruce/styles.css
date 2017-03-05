@@ -1,6 +1,6 @@
 body {
-  height: 100%;
-  background: #E0CDA9;
+    height: 100%;
+    background: #E0CDA9;
 }
 
 #entête {
@@ -12,59 +12,59 @@ body {
 }
 
 #coords {
-	display: flex;
-  flex-direction: column;
-  display: inline-block;
-  justify-content: space-around;
-  font-family: "Comic Sans MS";
-  color:#FFFFFF;
-  border: 1px solid white;
-  margin-left:  40%;
-  position: absolute;
-  top: 8%;
+    display: flex;
+    flex-direction: column;
+    display: inline-block;
+    justify-content: space-around;
+    font-family: "Comic Sans MS";
+    color:#FFFFFF;
+    border: 1px solid white;
+    margin-left:  40%;
+    position: absolute;
+    top: 8%;
 }
 
 #chek1 {
-  display: flex;
-  flex-direction: column;
-  display: inline-block;
-  justify-content: space-around;
-  font-family: "Comic Sans MS";
-  color:#FFFFFF;
-  margin-left: 65%;
-  position: absolute;
-  top: 9%;
+    display: flex;
+    flex-direction: column;
+    display: inline-block;
+    justify-content: space-around;
+    font-family: "Comic Sans MS";
+    color:#FFFFFF;
+    margin-left: 65%;
+    position: absolute;
+    top: 9%;
 }
 
 #latitude {
-  margin-left:15px;
-  margin-top:10px;
+    margin-left:15px;
+    margin-top:10px;
 }
 
 #longitude {
-  margin-left:15px;
-  margin-right:15px;
-  margin-bottom: 10px;
+    margin-left:15px;
+    margin-right:15px;
+    margin-bottom: 10px;
 }
 
 #mapid {
-  height: 80vh;
-  width: 60%;
-  margin: 10px;
-  float: right;
+    height: 80vh;
+    width: 60%;
+    margin: 10px;
+    float: right;
 }
 
 #setTweet {
-  width: 37%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+    width: 37%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 #zoom {
-  font-family: "Comic Sans MS";
-  color: #204060;
+    font-family: "Comic Sans MS";
+    color: #204060;
 }
 
 
@@ -78,15 +78,23 @@ h1 {
 }
 
 h2 {
-  color: #7c795d;
-  font-family: 'Trocchi', serif;
-  font-size: 1.3em;
-  font-weight: normal;
-  margin: 0;
-  text-align: center; 
+    color: #7c795d;
+    font-family: 'Trocchi', serif;
+    font-size: 1.3em;
+    font-weight: normal;
+    margin: 0;
+    text-align: center; 
+}
+
+h3 {
+    margin-left: 60%;
+    font-family: 'Chalkduster', cursive;
+    font-size: 1em;
+    color: #E0CDA9;
+    font-weight: normal;
 }
 
 img {
-  width: 100%;
-  height:auto;
+    width: 100%;
+    height:auto;
 }
