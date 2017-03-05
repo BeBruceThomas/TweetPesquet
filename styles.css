@@ -3,6 +3,14 @@ body {
   background: #E0CDA9;
 }
 
+footer{
+background:#204060;
+opacity: 0.9;
+position:absolute;
+bottom:0;
+width:100%;
+height:45px;
+}
 
 #entête {
     width: 100%;
@@ -12,7 +20,7 @@ body {
     border: 2px solid gray;
 }
 
-#coords{
+#coords {
 	display: flex;
   flex-direction: column;
   display: inline-block;
@@ -25,41 +33,37 @@ body {
   top: 8%;
 }
 
-#chek{
+#chek1 {
   display: flex;
   flex-direction: column;
   display: inline-block;
   justify-content: space-around;
   font-family: "Comic Sans MS";
   color:#FFFFFF;
-  margin-left:  80%;
+  margin-left: 60%;
   position: absolute;
   top: 9%;
-
 }
 
-#latitude{
+#latitude {
   margin-left:15px;
   margin-top:10px;
-
 }
 
-#longitude{
+#longitude {
   margin-left:15px;
   margin-right:15px;
   margin-bottom: 10px;
 }
 
-
-
-#mapid{
-  height: 80vh;
+#mapid {
+  height: 65vh;
   width: 60%;
   margin: 10px;
   float: right;
 }
 
-#setTweet{
+#setTweet {
   width: 37%;
   height: 100%;
   display: flex;
@@ -67,13 +71,13 @@ body {
   justify-content: space-around;
 }
 
-#zoom{
+#zoom {
   font-family: "Comic Sans MS";
   color: #204060;
 }
 
 
-h1{
+h1 {
     position: relative;
     left: 5%;
     font-family: 'Chalkduster', cursive;
@@ -81,16 +85,25 @@ h1{
     color: #E0CDA9;
     font-weight: normal;
 }
+
 h2 {
   color: #7c795d;
-   font-family: 'Trocchi', serif;
-    font-size: 1.3em;
+  font-family: 'Trocchi', serif;
+  font-size: 1.3em;
+  font-weight: normal;
+  margin: 0;
+  text-align: center;
+}
+
+h3 {
+    margin-left: 60%;
+    font-family: 'Chalkduster', cursive;
+    font-size: 1em;
+    color: #E0CDA9;
     font-weight: normal;
-     margin: 0;
-    text-align: center; }
+}
 
-img{
+img {
   width: 100%;
-  height:auto;
-
+  height:400px;
 }
