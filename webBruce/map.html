@@ -29,11 +29,11 @@
                 <div id="debug">
                     <label>Debug ISS<input type="checkbox" name="debug" id="debugMap"/></label>
                 </div>
-                <input type="range" value="41" min="1" max="81" step="10" onchange="AfficheRange2(this.value)" onkeyup="AfficheRange2(this.value)">
-                <span id="valBox">Facteur de vitesse = 41</span>
+                <input type="range" value="500" min="0" max="1000" step="100" onchange="AfficheRange2(this.value)" onkeyup="AfficheRange2(this.value)">
+                <span id="valBox">Facteur de vitesse = 500</span>
                 <script>
                     function AfficheRange2(newVal) {
-                        document.getElementById("valBox").innerHTML="Valeur="+newVal;
+                        document.getElementById("valBox").innerHTML="Facteur de vitesse = "+newVal;
                     }
                 </script>
           </div>
